@@ -2,6 +2,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Box } from '@mui/material';
+import mainImage from '../images/main-image.png';
 import Sidebar from '../components/Sidebar';
 
 function MainPage() {
@@ -13,7 +14,7 @@ function MainPage() {
 
   return (
     <Box display="flex" flexDirection="column" alignItems="center" minHeight="100vh">
-      <Box component="img" src="/main-image.jpg" alt="메인 이미지" maxWidth="100%" mb={2} />
+      <Box component="img" src={mainImage} alt="메인 이미지" maxWidth="100%" mb={2} />
       <Box component="h1" textAlign="center" fontSize="2rem" mb={2}>
         조선의 미식 유형 테스트
       </Box>
