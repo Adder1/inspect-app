@@ -1,7 +1,8 @@
 // src/pages/ResultPage.jsx
 import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Button, Box } from '@mui/material';
+import { useTestContext } from '../contexts/context';
 import resultImage1 from '../images/result-image-1.png';
 import resultImage2 from '../images/result-image-2.png';
 import resultImage3 from '../images/result-image-3.png';
@@ -19,15 +20,13 @@ import resultImage14 from '../images/result-image-14.png';
 import resultImage15 from '../images/result-image-15.png';
 import resultImage16 from '../images/result-image-16.png';
 
-
 function ResultPage() {
-  const location = useLocation();
   const navigate = useNavigate();
-  const { selectedChoices } = location.state || {}; // 선택한 항목 배열
+  const { selectedChoices, resetChoices } = useTestContext();
 
   // 선택지 조합에 따라 결과 이미지 결정
   const calculateResultImage = (choices) => {
-    const key = choices.join(''); // 배열을 문자열로 변환 (예: "ABAA")
+    const key = choices.join('');
     const images = {
       'AAAA': resultImage1,
       'AAAB': resultImage2,
@@ -46,12 +45,13 @@ function ResultPage() {
       'BBBA': resultImage15,
       'BBBB': resultImage16,
     };
-    return images[key] || 'default-result-image.jpg'; // 선택지에 맞는 이미지 반환
+    return images[key] || 'default-result-image.jpg';
   };
 
-  const resultImage = calculateResultImage(selectedChoices || []);
+  const resultImage = calculateResultImage(selectedChoices);
 
   const restartTest = () => {
+    resetChoices();
     navigate('/');
   };
 
