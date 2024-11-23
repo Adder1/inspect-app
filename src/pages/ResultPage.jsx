@@ -2,6 +2,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Box } from '@mui/material';
+import ReplayIcon from '@mui/icons-material/Replay';
 import { useTestContext } from '../contexts/context';
 import resultImage1 from '../images/result-image-1.png';
 import resultImage2 from '../images/result-image-2.png';
@@ -19,6 +20,7 @@ import resultImage13 from '../images/result-image-13.png';
 import resultImage14 from '../images/result-image-14.png';
 import resultImage15 from '../images/result-image-15.png';
 import resultImage16 from '../images/result-image-16.png';
+import '../styles/fonts.css';
 
 function ResultPage() {
   const navigate = useNavigate();
@@ -58,8 +60,31 @@ function ResultPage() {
   return (
     <Box display="flex" flexDirection="column" alignItems="center" minHeight="100vh">
       <Box component="img" src={resultImage} alt="결과 이미지" maxWidth="100%" mb={2} />
-      <Button variant="contained" color="primary" size="large" onClick={restartTest}>
-        다시 하기
+      <Button 
+        variant="contained" 
+        size="large" 
+        onClick={restartTest}
+        startIcon={<ReplayIcon sx={{ fontSize: '2rem' }} />}
+        sx={{
+          borderRadius: '50px',
+          padding: '10px 60px',
+          height: '65px',
+          fontSize: '1.8rem',
+          color: '#ffffff',
+          textTransform: 'none',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+          width: '400px',
+          backgroundColor: '#F0B249',
+          fontFamily: 'Pretendard',
+          '&:hover': {
+            backgroundColor: '#d9a242',
+          },
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px',
+        }}
+      >
+        다시하기
       </Button>
     </Box>
   );
