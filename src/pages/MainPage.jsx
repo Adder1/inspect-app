@@ -20,20 +20,21 @@ function MainPage() {
         src={mainImage} 
         alt="메인 이미지" 
         sx={{
-          maxWidth: '20%',  // 전체 너비의 60%로 설정
+          maxWidth: { xs: '60%', sm: '40%', md: '20%' },  // 반응형으로 변경
           width: 'auto',
           height: 'auto',
-          mb: 2,  // margin-bottom
+          mb: 2,
         }}
       />
       <Box 
         component="h1" 
         textAlign="center" 
         sx={{
-          fontSize: '2.2rem',  // 글씨 크기 증가
+          fontSize: { xs: '1.8rem', sm: '2rem', md: '2.2rem' },  // 반응형 폰트 크기
           mb: 2,
-          fontFamily: 'Pretendard',  // Pretendard 폰트 적용
-          fontWeight: 500,  // Medium 굵기에 해당
+          fontFamily: 'Pretendard',
+          fontWeight: 500,
+          px: 2, // 좌우 패딩 추가
         }}
       >
         오늘의 맥주를 추천해드립니다
@@ -44,13 +45,13 @@ function MainPage() {
         onClick={startTest}
         sx={{
           borderRadius: '50px',
-          padding: '10px 60px',
-          height: '65px',
-          fontSize: '1.8rem',
+          padding: '10px 30px',
+          height: { xs: '50px', sm: '60px', md: '65px' },
+          fontSize: { xs: '1.4rem', sm: '1.6rem', md: '1.8rem' },
+          width: { xs: '80%', sm: '300px' },  // 모바일에서는 화면의 80%
           color: '#ffffff',
           textTransform: 'none',
           boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-          width: '300px',
           backgroundColor: '#133020',
           fontFamily: 'Pretendard',
           '&:hover': {

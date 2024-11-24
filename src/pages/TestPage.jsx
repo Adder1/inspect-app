@@ -60,20 +60,26 @@ function TestPage() {
         src={stepImages[step]} 
         alt={`테스트 이미지 ${step}`} 
         sx={{
-          width: '600px',
+          width: { xs: '90%', sm: '80%', md: '600px' },
           height: 'auto',
           mb: 4
         }}
       />
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '600px' }}>
+      <Box sx={{ 
+        display: 'flex', 
+        flexDirection: 'column', 
+        gap: '20px', 
+        width: { xs: '90%', sm: '80%', md: '600px' },
+        px: 2
+      }}>
         <Button 
           variant="contained" 
           size="large" 
           onClick={() => handleChoice('A')}
           sx={{
             borderRadius: '8px',
-            padding: '15px 60px',
-            fontSize: '1.2rem',
+            padding: { xs: '12px 20px', sm: '15px 40px', md: '15px 60px' },
+            fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem' },
             color: '#ffffff',
             textTransform: 'none',
             width: '100%',
@@ -92,8 +98,8 @@ function TestPage() {
           onClick={() => handleChoice('B')}
           sx={{
             borderRadius: '8px',
-            padding: '15px 60px',
-            fontSize: '1.2rem',
+            padding: { xs: '12px 20px', sm: '15px 40px', md: '15px 60px' },
+            fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem' },
             color: '#ffffff',
             textTransform: 'none',
             width: '100%',
