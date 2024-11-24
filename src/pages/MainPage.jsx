@@ -20,7 +20,7 @@ function MainPage() {
         src={mainImage} 
         alt="메인 이미지" 
         sx={{
-          maxWidth: { xs: '60%', sm: '40%', md: '20%' },  // 반응형으로 변경
+          maxWidth: { xs: '80%', sm: '60%', md: '30%' },  // 크기를 더 크게 조정
           width: 'auto',
           height: 'auto',
           mb: 2,
