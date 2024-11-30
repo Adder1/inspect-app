@@ -84,7 +84,7 @@ function ResultPage() {
           gap: '10px',
         }}
       >
-        다시하기
+        다시하기 重来
       </Button>
     </Box>
   );

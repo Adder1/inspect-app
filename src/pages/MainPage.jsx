@@ -37,7 +37,8 @@ function MainPage() {
           px: 2, // 좌우 패딩 추가
         }}
       >
-        오늘의 맥주를 추천해드립니다
+        오늘의 맥주를 추천해드립니다 <br />
+        我推荐今天的啤酒
       </Box>
       <Button 
         variant="contained" 
@@ -59,7 +60,7 @@ function MainPage() {
           },
         }}
       >
-        시작하기
+        시작하기 开始
       </Button>
       {/* <Sidebar /> */}
     </Box>

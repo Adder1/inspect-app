@@ -21,23 +21,23 @@ function TestPage() {
   const questions = {
     // 1번 질문 : 오늘 날씨는 어떤가요?
     1: {
-      optionA: "따사로운 햇살 아래 산책하고 싶은 날씨",
-      optionB: "비 오는 날 창가에서 커피 한 잔 마시고 싶은 날씨"
+      optionA: "따사로운 햇살 아래 산책하고 싶은 날씨\n在温暖的阳光下想散步的天气",
+      optionB: "비 오는 날 창가에서 커피 한 잔 마시고 싶은 날씨\n下雨天窗边想喝杯咖啡的天气"
     },
     // 2번 질문 : 오늘 당신의 기분은 어때요?
     2: {
-      optionA: "기분이 좋아서 춤추고 싶은 날",
-      optionB: "카페에서 조용히 책을 읽고 싶은 날"
+      optionA: "기분이 좋아서 춤추고 싶은 날\n心情好想跳舞的日子",
+      optionB: "카페에서 조용히 책을 읽고 싶은 날\n想在咖啡厅安静地读书的日子"
     },
     // 3번 질문 : 맥주를 어디서 마시고 싶나요?
     3: {
-      optionA: "오늘은 힘들어! 집에서 조용히 마시고 싶어",
-      optionB: "오늘은 기분 전환이 필요해! 떠들썩한 분위기에서 마시고 싶어"
+      optionA: "오늘은 힘들어! 집에서 조용히 마시고 싶어\n今天很累! 我想在家里安静地喝",
+      optionB: "오늘은 기분 전환이 필요해! 떠들썩한 분위기에서 마시고 싶어\n今天需要转换一下心情! 想在热闹的气氛中喝"
     },
     // 4번 질문 : 맥주를 누구랑 마시고 싶나요?
     4: {
-      optionA: "친구들과 함께 파티하며 즐기는 맥주",
-      optionB: "가족이나 연인과 함께 힐링하며 마시는 맥주"
+      optionA: "친구들과 함께 파티하며 즐기는 맥주\n和朋友一起开派对享受的啤酒",
+      optionB: "가족이나 연인과 함께 힐링하며 마시는 맥주\n和家人或恋人一起治愈地喝着啤酒"
     }
   };
 
@@ -85,6 +85,7 @@ function TestPage() {
             width: '100%',
             backgroundColor: '#3d2815',
             fontFamily: 'Pretendard',
+            whiteSpace: 'pre-line',
             '&:hover': {
               backgroundColor: '#2b1b0f',
             },
@@ -105,6 +106,7 @@ function TestPage() {
             width: '100%',
             backgroundColor: '#3d2815',
             fontFamily: 'Pretendard',
+            whiteSpace: 'pre-line',
             '&:hover': {
               backgroundColor: '#2b1b0f',
             },
